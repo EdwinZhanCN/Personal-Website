@@ -1,0 +1,19 @@
+.maintitle{
+    color: #96be95;
+}
+.maintitle-container{
+    position: relative;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    z-index: 4;
+    pointer-events: none;
+    margin-top: 0;
+}
+.subhead {
+    font-size: 24px;
+    line-height: 1.16667;
+    font-weight: 400;
+    letter-spacing: .009em;
+    font-family: "SF Pro Display"
+}
