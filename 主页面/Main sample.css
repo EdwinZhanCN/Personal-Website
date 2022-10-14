@@ -1,15 +1,15 @@
 
 .maintitle-container{
-    width: 300px;
-    height: 96px;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: absolute;
-    text-align: center;
+    height: 0;
+    padding-top: 15.16%;
+    position: relative;
 }
+.ac_coupon-content {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-size: cover;
+} 
 .maintitle{
     color: #96be95;
 }
@@ -27,4 +27,13 @@ h2{
     font-weight: 400;
     letter-spacing: .009em;
     font-family: "SF Pro Display"
+}
+
+@keyframes openAnimate{
+    from{
+        margin-left: auto;
+        margin-right: auto;
+    }to{
+        margin-left: 0;
+    }
 }
