@@ -94,7 +94,7 @@ h2{
 
 .daily-wrapper{
     height: 500px;
-    width: 900px;
+    width: 1000px;
     padding-top: 44px;
     grid-gap: 3rem;
     display: grid;
@@ -105,16 +105,18 @@ h2{
     margin:0 auto;
 }
 
-@media screen{}
-.daily-wrapper .main-wrapper{
-    grid-area: b;
-    background-color: rgb(109, 211, 211);
-}
-
 .daily-wrapper .main-wrapper{
 	grid-area: b;
 	background-color: green;
 }
+
+@media screen and (min-width: 769px){
+    .daily-wrapper .main-wrapper{
+        grid-area: b;
+        background-color: rgb(109, 211, 211);
+    }
+}
+
 
 
 .daily-wrapper .pic-wrapper{
@@ -127,6 +129,7 @@ h2{
 	user-select: none;
 	margin:0 15px;
 }
+
 
 
 
