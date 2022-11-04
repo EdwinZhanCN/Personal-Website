@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <link rel="stylesheet" type="text/css" href="progress-sample.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EZ-progress</title>
+    <script type="text/javascript">
+        myVid=document.getElementById("app-view");
+        myVid.muted=true;
+        var area = document.getElementById("");
+
+        $(function(){
+                $(window).scroll(function(){
+                    var wst = $(window).scrollTop(); 
+                    var title = document.querySelectorAll('#article a');
+                    for(i=0; i<title.length; i++){
+                        if($("#a"+i).offset().top <= wst){
+                            $('#nav a').removeClass("c");  //c是标签激活的class
+                            $('#a'+i+i).addClass("c");
+                        }
+                    }
+                });
+            });
+            
+    </script>
+</head>
+<body>
+    <div class="hamburger_menu">
+        <input type="checkbox" id="toggle" />
+        <label for="toggle">
+            <div class="hamburger_container">
+                <span></span>
+                <span></span>
+            </div>
+        </label>
+        <ul>
+            <li>Self-Intro</li>
+            <li>Ideas</li>
+            <li>Blog</li>
+            <li>Progress</li>
+        </ul>
+    </div>
+    <a href="/main/main.html">
+        <h1 class="title">
+            EdwinZhan
+        </h1>
+    </a>
+    
+    <div class="main-wrapper">
+        <nav id="sidebar-link" class="sidebar">
+            <div class="sidebar-inner">
+                <aside class = "sidebar-inner-container">
+                    <section id = "nav">
+                        <header>
+                            <h2>
+                                My first App
+                            </h2>
+                        </header>    
+                            <ul class="list">
+                                <li>
+                                    <a id ="a11" class="list-link" href="#a1" aria-current="false">
+                                        Introduction
+                                    </a>
+                                </li>
+                                
+                                <li>
+				                    <a id = "a22" class = "list-link" href = "#a2" aria-current="false">
+				    	                Fake Class
+    				                </a>
+                                </li>
+                            </ul>
+                        
+                    </section>
+                </aside>
+            </div>
+        </nav>
+        <main class="main-content">
+            <article class="main-content-page">
+                <h1 id="a1" onfocus="myfunction()">
+                    My first App
+                </h1>
+                <div class = "main-intro" aria-labelledby="intro">
+                    <p>
+                        This is an App based on the AppLab on the <a href="code.org">code.org </a>.
+                         It has a lot of special techniques that I create for functional reason, like
+                         a "fack class".
+                    </p>
+                    <p>
+                        Can you play it? I do think it is a small stupid game...
+                    </p>
+                </div>
+                <iframe id="app-view" src="/CardsMemoryGame/game.html">
+                </iframe>
+                <h1>
+                    Fake Class
+                </h1>
+                <div id = "a2" class = "main-intro" aria-labelledby = "fakeClass">
+                    <p>
+                        Initially, I do not have any concept of <span>class</span>. These dictionary named by
+                    card1, card2, card3... just behaves like a real card, because it has some properties like
+                    "isMatched", "isFaceUp"...These properties compose of each card, so that the game can be continued.
+                    At that time, It is the best way for me to deal with the matching and changing state of each card.
+                    </p>
+                </div>
+            </article>
+        </main>
+    </div>
+</body>
+</html>

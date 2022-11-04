@@ -1,0 +1,350 @@
+
+.maintitle-container{
+    height: 0;
+    padding-top: 15.16%;
+    position: relative;
+}
+
+.maintitle{
+    color: #c85a64;
+}
+
+h2{
+    margin-block-start:0;
+    margin-block-end: 0;
+    font-size: 45px;
+}
+.subhead {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-size: 24px;
+    line-height: 1.16667;
+    font-weight: 400;
+    letter-spacing: .009em;
+    font-family: "SF Pro Display"
+}
+
+#navigation{
+    display: none;
+}
+
+
+@media screen and (min-width: 615px){
+    #navigation{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 999;
+        width: 100%;
+        height: 44px;
+        background: rgba(0,0,0);
+    }
+}
+
+#navigation .nav-content{
+    margin: 0 auto;
+    max-width: 980px;
+    padding: 0 22px;
+    position: relative;
+    z-index: 2;
+    padding-left: max(22px,env(safe-area-inset-left));
+    padding-right: max(22px,env(safe-area-inset-right));
+}
+
+#navigation .nav-list{
+    width: auto;
+    z-index: 3;
+    cursor: default;
+    margin: 0 -8px;
+    height: 44px;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content:space-between;
+}
+
+#navigation .nav-item{
+    list-style-type: none;
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    height: 44px;
+    z-index: 1;
+    vertical-align: top;
+
+}
+#navigation .nav-link{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 3.66667;
+    color: wheat;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 0 8px;
+    height: 44px;
+    background: no-repeat;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+}
+#navigation .nav-link:hover{
+    color: aliceblue;
+}
+@font-face{
+    font-family: Helvetica;
+    src:url(/Helvetica.ttf);
+}
+@font-face {
+    font-family: Rachel;
+    src: url(Rachel-1.ttf);
+}
+
+:root{
+    --main-width: 100vw;
+}
+
+
+.daily-wrapper{
+    height: calc(var(--main-width)*(510/1422));
+    max-width: 100%;
+    padding-top: 44px;
+    grid-gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(12,minmax(0,1fr));
+    margin:0 auto;
+}
+
+@media screen and (min-width: 1422px){
+    .daily-wrapper{
+        height: 510px;
+        max-width: 1422px;
+        padding-top: 44px;
+        grid-gap: 2rem;
+        display: grid;
+        grid-template-columns: repeat(12,minmax(0,1fr));
+        margin:0 auto;
+    }
+}
+
+
+.daily-wrapper .main-wrapper{
+    font-family: Helvetica;
+    border-radius: 15px;
+    display: block;
+    grid-column: span 5;
+    background-color:#f1f4df
+}
+
+
+.daily-wrapper .pic-wrapper{
+    display: block;
+    grid-column: span 7;
+    background-size: 100% 100%;
+    border-radius: 15px;
+    background-image: url("https://www.apple.com.cn/newsroom/images/live-action/keynote-march-2019/Apples-keynote-event_Roger_Rosner-03252019_big.jpg.large_2x.jpg");
+    background-color: #c85a64;
+}
+
+.main-content{
+	user-select: none;
+	margin:0 15px;
+}
+
+.main-intro{
+    margin-top: 20px;
+    margin-left: 1rem;
+}
+
+.main-intro-title{
+    margin-block-start:0;
+    margin-block-end: 0;
+    font-family: Rachel;
+    font-size: 60px;
+}
+.main-intro-content{
+    font-weight: 40;
+    padding-top: 15px;
+    margin-block-start:0;
+    margin-block-end: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+.intro-pic{
+    animation-name: open;
+    animation-duration: 1s;
+    height: calc(var(--main-width)*(940/1834));
+    max-width: 1422px;
+    padding-top: 15px;
+    grid-gap: 2rem;
+    display: grid;
+    grid-template-areas: 
+    "a b"
+    "c d";
+}
+
+@media screen and (min-width: 1834px){
+    .intro-pic{
+        height: 940px;
+        max-width: 1834px;
+        padding-top: 15px;
+        grid-gap: 2rem;
+        display: grid;
+        grid-template-areas: 
+        "a b"
+        "c d";
+    }
+}
+
+.intro-pic-firstcode{
+    grid-area: a;
+    background-size: 100% 100%;
+    background-image: url(firstcode.PNG);
+}
+
+.intro-pic-2{
+    grid-area: b;
+    background-color: #c85a64;
+}
+
+.intro-pic-3{
+    grid-area: c;
+    background-color: #c85a64;
+}
+
+.intro-pic-4{
+    grid-area: d;
+    background-color: #c85a64;
+}
+
+.hamburger_menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: none;
+	width: 100%;
+	height: 44px;
+	background-color: rgba(0,0,0);
+}
+
+.hamburger_menu #toggle {
+	display: none;
+}
+
+.hamburger_menu label {
+    margin: none;
+	display: block;
+	width: 44px;
+	height: 44px;
+	cursor: pointer;
+}
+.hamburger_menu label .hamburger_container {
+	position: relative;
+	top: 17px;
+	left: 14px;
+	width: 20px;
+	height: 20px;
+}
+.hamburger_menu label .hamburger_container span {
+	position: relative;
+	top: 0;
+	display: block;
+	height: 1px;
+	background-color: #fff;
+	transition: transform 0.2s ease-in-out, top 0.2s ease-in-out 0.2s;
+}
+.hamburger_menu label .hamburger_container span:nth-child(2) {
+	top: 10px;
+}
+
+.hamburger_menu #toggle:checked + label .hamburger_container span:nth-child(1) {
+	top: 5px;
+	transform: rotate(45deg);
+	transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
+}
+
+.hamburger_menu #toggle:checked + label .hamburger_container span:nth-child(2) {
+	top: 5px;
+	transform: rotate(-45deg);
+	transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
+}
+.hamburger_menu ul {
+    margin-top: 0;
+	width: 100vm;
+	height: calc(100vh - 48px);
+	padding: 0 50px;
+	transform: scaleY(0);
+	transition: all 0.4s ease-in-out;
+	transform-origin: 50% 0;
+	background-color: rgba(0, 0, 0);
+}
+.hamburger_menu ul li {
+	list-style: none;
+	height: 50px;
+	line-height: 50px;
+	font-size: 14px;
+    font-weight: 400;
+    color: wheat;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+.hamburger_menu ul li:hover{
+    color: white;
+}
+.hamburger_menu ul li:nth-child(-n + 4) {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.hamburger_menu #toggle:checked ~ ul {
+	transform: scaleY(1);
+}
+
+.bilibili-icon{
+    display: block;
+}
+
+.contact-span{
+    display: block;
+    height: 1px;
+    background-color: black;
+}
+.contact-title{
+    font-weight: 100;
+    text-align-last: center;
+    margin-block-start:6;
+    margin-block-end: 0;
+}
+
+.contact-list{
+    width: 100%;
+    z-index: 1;
+    cursor: default;
+    margin-top: 10;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0px;
+    height: 44px;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content:space-evenly;
+}
+.contact-item{
+    list-style-type: none;
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    height: 44px;
+    z-index: 1;
+    vertical-align: top;
+}
+
+@keyframes open{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
