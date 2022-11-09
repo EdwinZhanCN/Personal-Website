@@ -273,6 +273,7 @@ h2{
 	transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
 }
 .hamburger_menu ul {
+    z-index: 999;
     margin-top: 0;
 	width: 100vm;
 	height: calc(100vh - 48px);
@@ -322,23 +323,24 @@ h2{
 }
 
 .contact-list{
+    padding: 0 30px;
     width: 100%;
     z-index: 1;
     cursor: default;
     margin-top: 10;
-    margin-left: 0;
+    left: 0;
     margin-right: 0;
     margin-bottom: 0px;
     height: 44px;
     display: flex;
     -webkit-box-pack: justify;
-    justify-content:space-evenly;
+    justify-content:center;
 }
 .contact-item{
+    padding: 10px;
     list-style-type: none;
     box-sizing: border-box;
     display: inline-block;
-    position: relative;
     height: 44px;
     z-index: 1;
     vertical-align: top;

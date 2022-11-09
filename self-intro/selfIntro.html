@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EZ-Self-Intro</title>
-    <!-- <script>
+    <script>
         var op1 = 1;
         var op2 = 0;
         function animateout(){
             var page = document.getElementById("pic-wrapper");
             var title = document.getElementById("title");
+            var p = document.getElementById("p");
             var id = setInterval(frame, 100);
             function frame(){
                 op1 -= 0.1;
@@ -21,13 +22,14 @@
                 } else {
                     page.style.opacity = op1 + "";
                     title.style.opacity = op2 + "";
+                    p.style.display = "block";
                 }
             }
         }
-    </script> -->
+    </script>
 </head>
 <body>
-    <div id = "pic-wrapper" class="pic-wrapper">
+    <div id = "pic-wrapper" class="pic-wrapper" onclick="animateout()">
         <picture class="pic-1">
         </picture>
         <picture class="pic-2">
@@ -39,13 +41,22 @@
         <picture class="pic-5">
         </picture>
     </div>
-    <header id = "title" class="main-title">
-        <h1>
-            We all have a bright future
-        </h1>
-    </header>
-    <div>
-        <h2>Self-Intro</h2>
+    
+    <div class="intro-paragraph-body">
+        <header id = "title" class="main-title">
+            <h1>
+                We all have a bright future
+            </h1>
+        </header>
+        <article id = "p" class="intro-article">
+            <p>
+
+            </p>
+        </article>
+        <nav>
+            
+        </nav>
+
     </div>
 
 </body>
