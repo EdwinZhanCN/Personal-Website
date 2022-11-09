@@ -141,6 +141,7 @@ p{
 }
 
 .sidebar{
+	top: 10px;
 	padding-top: 2rem;
 	position: sticky;
     max-height: calc(100vh);
