@@ -6,29 +6,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EZ-Self-Intro</title>
+    <script src="/js/jquery-3.5.0.js"></script>
+</head>
+<body>
     <script>
         var op1 = 1;
         var op2 = 0;
         function animateout(){
+            console.log("nb");
             var page = document.getElementById("pic-wrapper");
             var title = document.getElementById("title");
             var p = document.getElementById("p");
             var id = setInterval(frame, 100);
+            var navigation = document.getElementById("navigation");
+            var detail = document.getElementById("detail");
             function frame(){
-                op1 -= 0.1;
-                op2 += 0.1;
-                if(page.style.opacity == "0"){
+                if(getComputedStyle(page,null)['opacity'] <= 0){
                     clearInterval(id);
+                    p.style.display = "block";
+                    navigation.style.display = "block";
+                    detail.style.display = "block";
                 } else {
+                    op1 -= 0.1;
+                    op2 += 0.1;
                     page.style.opacity = op1 + "";
                     title.style.opacity = op2 + "";
-                    p.style.display = "block";
                 }
             }
         }
+
+        $(function(){
+            $(window).scroll(function(){
+                slideIn($("#detail-p1"));
+                slideIn($("#detail-pic1"))
+            });
+
+            function slideIn(obj){
+                var targetHeight = obj.offset().top;
+                var scrollTop = $(window).scrollTop();
+                console.log(scrollTop);
+
+                if(scrollTop > targetHeight - 500){
+                    obj.addClass("build-in-animate");
+                } else{
+                    obj.removeClass("build-in-animate");
+                }
+            }
+        });
     </script>
-</head>
-<body>
     <div id = "pic-wrapper" class="pic-wrapper" onclick="animateout()">
         <picture class="pic-1">
         </picture>
@@ -75,16 +100,18 @@
             </p>
         </article>
         
-        <div class="detail">
-            <div class="detail-content row">
+        <div id = "detail" class="detail">
+            <div class="detail-content">
                 <div class="detail-content-collumn">
-                    <p class="detail-intro">
-                        The beautiful pictures are all around the world.
-                    </p>
-                </div>
-                <div class="detail-content-pic">
-                    <picture class="detail-pic">
-                    </picture>
+                    <div  class="detail-chapter">
+                        <p id = "detail-p1" class="detail-content-p slide-in-X">
+                            The <span style="color: orange;">beautiful</span> pictures are all around the world.
+                        </p>
+                        <picture id = "detail-pic1" class="detail-pic slide-in-Y">
+                            
+                        </picture>
+                    </div>
+                    
                 </div>
                 
             </div>
