@@ -44,9 +44,8 @@
             function slideIn(obj){
                 var targetHeight = obj.offset().top;
                 var scrollTop = $(window).scrollTop();
-                console.log(scrollTop);
 
-                if(scrollTop > targetHeight - 500){
+                if(scrollTop > targetHeight - 900){
                     obj.addClass("build-in-animate");
                 } else{
                     obj.removeClass("build-in-animate");
@@ -78,13 +77,13 @@
                 <div class="nav-content">
                     <ul class="nav-list">
                         <li class = "nav-item">
-                            <a class="nav-link">EdwinZhan</a>
+                            <a class="nav-link" href="/main/main.html">EdwinZhan</a>
                         </li>
                         <li class = "nav-item">
                             <a class="nav-link"> Blog</a>
                         </li>
                         <li class = "nav-item">
-                            <a class="nav-link"> Progress</a>
+                            <a class="nav-link" href="/progress/progress.html"> Progress</a>
                         </li>
                         <li class = "nav-item">
                             <a class="nav-link"> Ideas </a>

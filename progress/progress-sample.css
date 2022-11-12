@@ -241,7 +241,7 @@ p{
 	border:0;
 	cursor: pointer;
 	background-size: 100% 100%;
-	background-image: url(/progress/images/relaod.png);
+	background-image: url(./img/reload.png);
 }
 p{
 	border-radius: 10;

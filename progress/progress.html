@@ -6,10 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EZ-progress</title>
-    <script type="text/javascript">
+    <script src = "/js/jquery-3.5.0.js" type="text/javascript">
         function refreshFrame(){
             document.getElementById('app-view').contentWindow.location.reload(true);
-        }     
+        }
+        
+        $(function(){
+            $(window).scroll(function(){
+                
+            });
+
+            function slideIn(obj){
+                var targetHeight = obj.offset().top;
+                var scrollTop = $(window).scrollTop();
+
+                if(scrollTop > targetHeight){
+                    obj.addClass("active");
+                } else{
+                    obj.removeClass("active");
+                }
+            }
+        });
     </script>
 </head>
 <body>
@@ -22,10 +39,10 @@
             </div>
         </label>
         <ul>
-            <li>Self-Intro</li>
+            <li><a href="/self-intro/selfIntro.html">Self-Intro</a></li>
             <li>Ideas</li>
             <li>Blog</li>
-            <li>Progress</li>
+            <li<a href="/progress/progress.html">Progress</a></li>
         </ul>
     </div>
     <header class="heading">
@@ -76,58 +93,64 @@
         </nav>
         <main class="main-content">
             <article class="main-content-page">
-                <h1 id="intro" onfocus="myfunction()">
+                <section id="intro">
+                    <h1>
                     My first App
-                </h1>
-                <div class = "main-intro" aria-labelledby="intro">
-                    <p>
-                        This is an App based on the AppLab on the <a href="code.org">code.org </a>.
-                         It has a lot of special techniques that I create for functional reason, like
-                         a "fack class".
-                    </p>
-                    <p>
-                        Can you play it? I do think it is a small stupid game...
-                    </p>
-                </div>
-                <div>
-                    <iframe id="app-view" src="/CardsMemoryGame/game.html">
-                    </iframe>
-                    <button class = "iframe-button" onclick="javascript:refreshFrame();">
-                    </button>
-                </div>
+                    </h1>
+                    <div class = "main-intro">
+                        <p>
+                            This is an App based on the AppLab on the <a href="code.org">code.org </a>.
+                            It has a lot of special techniques that I create for functional reason, like
+                            a "fack class".
+                        </p>
+                        <p>
+                            Can you play it? I do think it is a small stupid game...
+                        </p>
+                    </div>
+                    <div>
+                        <iframe id="app-view" src="/CardsMemoryGame/game.html">
+                        </iframe>
+                        <button class = "iframe-button" onclick="javascript:refreshFrame();">
+                        </button>
+                    </div>
+                </section>
                 
-                <h1 id="fakeClass">
-                    Fake Class
-                </h1>
-                <div aria-labelledby = "fakeClass">
-                    <p>
-                        Initially, I do not have any concept of <span>class</span>. These dictionary named by
-                    card1, card2, card3... just behaves like a real card, because it has some properties like
-                    "isMatched", "isFaceUp"...These properties compose of each card, so that the game can be continued.
-                    At that time, It is the best way for me to deal with the matching and changing state of each card.
-                    </p>
-                </div>
-                <picture>
-                    <img src="/progress/images/fake class.png">
-                </picture>
-                <div>
-                    <p>
-                        After I learned java, the real Class showed me that what I did is stupid... hhhh
-                    </p>
-                </div>
-                <h1 id = "gameLogic">
-                    Game Logic
-                </h1>
-                <div>
-                    <p>
-                        With this "Fake Class", the logic of the game is very simple. I prepared a list to store 
-                        the cards clicked by the user, and then compared the "CardContent" of the two cards. 
-                        Finally, I use the output to determine whether to flip (change the color) or not.
-                    </p>
-                </div>
-                <picture>
-                    <img src="/progress/images/game logic.png">
-                </picture>
+                <section id="fakeClass">
+                    <h1>
+                        Fake Class
+                    </h1>
+                    <div aria-labelledby = "fakeClass">
+                        <p>
+                            Initially, I do not have any concept of <span>class</span>. These dictionary named by
+                        card1, card2, card3... just behaves like a real card, because it has some properties like
+                        "isMatched", "isFaceUp"...These properties compose of each card, so that the game can be continued.
+                        At that time, It is the best way for me to deal with the matching and changing state of each card.
+                        </p>
+                    </div>
+                    <picture>
+                        <img src="/progress/images/fake class.png">
+                    </picture>
+                    <div>
+                        <p>
+                            After I learned java, the real Class showed me that what I did is stupid... hhhh
+                        </p>
+                    </div>
+                </section>
+                <section id = "gameLogic">
+                    <h1>
+                        Game Logic
+                    </h1>
+                    <div>
+                        <p>
+                            With this "Fake Class", the logic of the game is very simple. I prepared a list to store 
+                            the cards clicked by the user, and then compared the "CardContent" of the two cards. 
+                            Finally, I use the output to determine whether to flip (change the color) or not.
+                        </p>
+                    </div>
+                    <picture>
+                        <img src="./img/">
+                    </picture>
+                </section>
             </article>
         </main>
     </div>
