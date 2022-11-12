@@ -7,23 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EZ-progress</title>
     <script type="text/javascript">
-        myVid=document.getElementById("app-view");
-        myVid.muted=true;
-        var area = document.getElementById("");
-
-        $(function(){
-                $(window).scroll(function(){
-                    var wst = $(window).scrollTop(); 
-                    var title = document.querySelectorAll('#article a');
-                    for(i=0; i<title.length; i++){
-                        if($("#a"+i).offset().top <= wst){
-                            $('#nav a').removeClass("c");  //c是标签激活的class
-                            $('#a'+i+i).addClass("c");
-                        }
-                    }
-                });
-            });
-            
+        function refreshFrame(){
+            document.getElementById('app-view').contentWindow.location.reload(true);
+        }     
     </script>
 </head>
 <body>
@@ -42,11 +28,17 @@
             <li>Progress</li>
         </ul>
     </div>
-    <a href="/main/main.html">
-        <h1 class="title">
-            EdwinZhan
-        </h1>
-    </a>
+    <header class="heading">
+        <div class="heading-container">
+            <a href="/main/main.html">
+                <h1 class="title">
+                    EdwinZhan
+                </h1>
+            </a>
+        </div>
+        
+    </header>
+    
     
     <div class="main-wrapper">
         <nav id="sidebar-link" class="sidebar">
@@ -60,15 +52,21 @@
                         </header>    
                             <ul class="list">
                                 <li>
-                                    <a id ="a11" class="list-link" href="#a1" aria-current="false">
+                                    <a class="list-link" href="#intro" aria-current="false">
                                         Introduction
                                     </a>
                                 </li>
                                 
                                 <li>
-				                    <a id = "a22" class = "list-link" href = "#a2" aria-current="false">
+				                    <a class = "list-link" href = "#fakeClass" aria-current="false">
 				    	                Fake Class
     				                </a>
+                                </li>
+
+                                <li>
+                                    <a class="list-link" href="#gameLogic">
+                                        Game Logic
+                                    </a>
                                 </li>
                             </ul>
                         
@@ -78,7 +76,7 @@
         </nav>
         <main class="main-content">
             <article class="main-content-page">
-                <h1 id="a1" onfocus="myfunction()">
+                <h1 id="intro" onfocus="myfunction()">
                     My first App
                 </h1>
                 <div class = "main-intro" aria-labelledby="intro">
@@ -91,12 +89,17 @@
                         Can you play it? I do think it is a small stupid game...
                     </p>
                 </div>
-                <iframe id="app-view" src="/CardsMemoryGame/game.html">
-                </iframe>
-                <h1>
+                <div>
+                    <iframe id="app-view" src="/CardsMemoryGame/game.html">
+                    </iframe>
+                    <button class = "iframe-button" onclick="javascript:refreshFrame();">
+                    </button>
+                </div>
+                
+                <h1 id="fakeClass">
                     Fake Class
                 </h1>
-                <div id = "a2" class = "main-intro" aria-labelledby = "fakeClass">
+                <div aria-labelledby = "fakeClass">
                     <p>
                         Initially, I do not have any concept of <span>class</span>. These dictionary named by
                     card1, card2, card3... just behaves like a real card, because it has some properties like
@@ -104,6 +107,27 @@
                     At that time, It is the best way for me to deal with the matching and changing state of each card.
                     </p>
                 </div>
+                <picture>
+                    <img src="/progress/images/fake class.png">
+                </picture>
+                <div>
+                    <p>
+                        After I learned java, the real Class showed me that what I did is stupid... hhhh
+                    </p>
+                </div>
+                <h1 id = "gameLogic">
+                    Game Logic
+                </h1>
+                <div>
+                    <p>
+                        With this "Fake Class", the logic of the game is very simple. I prepared a list to store 
+                        the cards clicked by the user, and then compared the "CardContent" of the two cards. 
+                        Finally, I use the output to determine whether to flip (change the color) or not.
+                    </p>
+                </div>
+                <picture>
+                    <img src="/progress/images/game logic.png">
+                </picture>
             </article>
         </main>
     </div>
