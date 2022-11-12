@@ -177,7 +177,7 @@ h2{
     animation-name: open;
     animation-duration: 1s;
     height: calc(var(--main-width)*(940/1834));
-    max-width: 1422px;
+    max-width: 1834px;
     padding-top: 15px;
     grid-gap: 2rem;
     display: grid;
@@ -200,24 +200,31 @@ h2{
 }
 
 .intro-pic-firstcode{
+    border-radius: 10px;
     grid-area: a;
     background-size: 100% 100%;
     background-image: url(firstcode.PNG);
 }
 
 .intro-pic-2{
+    border-radius: 10px;
     grid-area: b;
-    background-color: #c85a64;
+    background-size: 100%;
+    background-image: url(Atime的副本.jpg);
 }
 
 .intro-pic-3{
+    border-radius: 10px;
     grid-area: c;
-    background-color: #c85a64;
+    background-size: 100%;
+    background-image: url(photo.jpeg);
 }
 
 .intro-pic-4{
+    border-radius: 10px;
     grid-area: d;
-    background-color: #c85a64;
+    background-size: 100%;
+    background-image: url(photo2.jpeg);
 }
 
 .hamburger_menu {
@@ -273,7 +280,6 @@ h2{
 	transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
 }
 .hamburger_menu ul {
-    z-index: 999;
     margin-top: 0;
 	width: 100vm;
 	height: calc(100vh - 48px);
@@ -323,24 +329,23 @@ h2{
 }
 
 .contact-list{
-    padding: 0 30px;
     width: 100%;
     z-index: 1;
     cursor: default;
     margin-top: 10;
-    left: 0;
+    margin-left: 0;
     margin-right: 0;
     margin-bottom: 0px;
     height: 44px;
     display: flex;
     -webkit-box-pack: justify;
-    justify-content:center;
+    justify-content:space-evenly;
 }
 .contact-item{
-    padding: 10px;
     list-style-type: none;
     box-sizing: border-box;
     display: inline-block;
+    position: relative;
     height: 44px;
     z-index: 1;
     vertical-align: top;
