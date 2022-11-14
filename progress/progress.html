@@ -6,30 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EZ-progress</title>
-    <script src = "/js/jquery-3.5.0.js" type="text/javascript">
-        function refreshFrame(){
-            document.getElementById('app-view').contentWindow.location.reload(true);
-        }
+    <script src="/js/jquery-3.5.0.js"></script>
+    
+</head>
+<body>
+    <script>
         
-        $(function(){
-            $(window).scroll(function(){
-                
-            });
 
+        $(function(){
+
+            $(window).scroll(function(){
+                slideIn($("#intro"));
+                slideIn($("#fakeClass"))
+                slideIn($("#gameLogic"))
+            });
+            
             function slideIn(obj){
                 var targetHeight = obj.offset().top;
                 var scrollTop = $(window).scrollTop();
-
-                if(scrollTop > targetHeight){
-                    obj.addClass("active");
+                var id = "#" + obj.attr('id');
+                if(scrollTop >= targetHeight){
+                    document.querySelectorAll("a[href*= '" + id +"']")[0].classList.add("active");
                 } else{
-                    obj.removeClass("active");
+                    document.querySelectorAll("a[href*= '" + id +"']")[0].classList.remove("active");
+                }
+                if(scrollTop >= targetHeight + obj.height()){
+                    document.querySelectorAll("a[href*= '" + id +"']")[0].classList.remove("active");
                 }
             }
         });
     </script>
-</head>
-<body>
     <div class="hamburger_menu">
         <input type="checkbox" id="toggle" />
         <label for="toggle">
@@ -40,9 +46,9 @@
         </label>
         <ul>
             <li><a href="/self-intro/selfIntro.html">Self-Intro</a></li>
-            <li>Ideas</li>
-            <li>Blog</li>
-            <li<a href="/progress/progress.html">Progress</a></li>
+            <li><a>Ideas</a></li>
+            <li><a>Blog</a></li>
+            <li><a href="/progress/progress.html">Progress</a></li>
         </ul>
     </div>
     <header class="heading">
@@ -108,9 +114,9 @@
                         </p>
                     </div>
                     <div>
-                        <iframe id="app-view" src="/CardsMemoryGame/game.html">
+                        <iframe id="app-view">
                         </iframe>
-                        <button class = "iframe-button" onclick="javascript:refreshFrame();">
+                        <button class = "iframe-button" onclick="refreshFrame();">
                         </button>
                     </div>
                 </section>
@@ -128,7 +134,7 @@
                         </p>
                     </div>
                     <picture>
-                        <img src="/progress/images/fake class.png">
+                        <img >
                     </picture>
                     <div>
                         <p>

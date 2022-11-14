@@ -38,14 +38,14 @@
         $(function(){
             $(window).scroll(function(){
                 slideIn($("#detail-p1"));
-                slideIn($("#detail-pic1"))
+                slideIn($("#detail-pic1"));
             });
 
             function slideIn(obj){
                 var targetHeight = obj.offset().top;
                 var scrollTop = $(window).scrollTop();
 
-                if(scrollTop > targetHeight - 900){
+                if(scrollTop > targetHeight - 800){
                     obj.addClass("build-in-animate");
                 } else{
                     obj.removeClass("build-in-animate");

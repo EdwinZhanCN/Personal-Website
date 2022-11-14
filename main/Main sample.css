@@ -5,6 +5,15 @@
     position: relative;
 }
 
+@font-face{
+    font-family: Helvetica;
+    src:url(./font/Helvetica.ttf);
+}
+@font-face {
+    font-family: Rachel;
+    src: url(./font/Rachel-1.ttf);
+}
+
 .maintitle{
     color: #c85a64;
 }
@@ -93,14 +102,8 @@ h2{
 #navigation .nav-link:hover{
     color: aliceblue;
 }
-@font-face{
-    font-family: Helvetica;
-    src:url(/Helvetica.ttf);
-}
-@font-face {
-    font-family: Rachel;
-    src: url(Rachel-1.ttf);
-}
+
+
 
 :root{
     --main-width: 100vw;
@@ -203,7 +206,7 @@ h2{
     border-radius: 10px;
     grid-area: a;
     background-size: 100% 100%;
-    background-image: url(firstcode.PNG);
+    background-image: url(./img/firstcode.PNG);
 }
 
 .intro-pic-2{
