@@ -11,16 +11,19 @@
 </head>
 <body>
     <script>
-        
+        function refreshFrame(){
+            document.getElementById('app-view').contentWindow.location.reload();
+        }
+
 
         $(function(){
 
             $(window).scroll(function(){
-                slideIn($("#intro"));
-                slideIn($("#fakeClass"))
-                slideIn($("#gameLogic"))
+                slideIn($('#intro'));
+                slideIn($('#fakeClass'))
+                slideIn($('#gameLogic'))
             });
-            
+
             function slideIn(obj){
                 var targetHeight = obj.offset().top;
                 var scrollTop = $(window).scrollTop();
@@ -101,7 +104,7 @@
             <article class="main-content-page">
                 <section id="intro">
                     <h1>
-                    My first App
+                        My first App
                     </h1>
                     <div class = "main-intro">
                         <p>
@@ -114,7 +117,7 @@
                         </p>
                     </div>
                     <div>
-                        <iframe id="app-view">
+                        <iframe id="app-view" src="/Personal-Website/CardsMemoryGame/game.html">
                         </iframe>
                         <button class = "iframe-button" onclick="refreshFrame();">
                         </button>
@@ -127,7 +130,7 @@
                     </h1>
                     <div aria-labelledby = "fakeClass">
                         <p>
-                            Initially, I do not have any concept of <span>class</span>. These dictionary named by
+                            Initially, I do not have any concept of <span style="color: orange">class</span>. These dictionary named by
                         card1, card2, card3... just behaves like a real card, because it has some properties like
                         "isMatched", "isFaceUp"...These properties compose of each card, so that the game can be continued.
                         At that time, It is the best way for me to deal with the matching and changing state of each card.

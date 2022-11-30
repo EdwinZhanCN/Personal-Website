@@ -120,11 +120,9 @@
 #navigation .nav-content{
     margin: 0 auto;
     max-width: 700px;
-    padding: 0 22px;
     position: relative;
     z-index: 2;
-    padding-left: max(22px,env(safe-area-inset-left));
-    padding-right: max(22px,env(safe-area-inset-right));
+    padding: 0 max(22px, env(safe-area-inset-right)) 0 max(22px, env(safe-area-inset-left));
 }
 
 #navigation .nav-list{
@@ -185,7 +183,7 @@
     position: relative;
 }
 
-.detail-content-collumn{
+.detail-content-column{
     height: 100vh;
     margin-left: 100px;
     max-width: 100%;
@@ -219,6 +217,7 @@
 }
 
 .detail-chapter{
+    margin-bottom: 60px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -226,7 +225,7 @@
 }
 .detail-pic{
     background-size: 100%;
-    margin-left: 60px;
+    margin: 30px auto;
     height: 270px;
     width: 500px;
     background-image: url(/self-intro/img/sample.jpg);

@@ -1,0 +1,37 @@
+*{
+    margin:0;
+}
+
+.main-title{
+    top: 20px;
+    position: relative;
+    z-index: 1;
+    font-family: "Times New Roman";
+    font-weight: 400;
+    font-size: 40px;
+    margin: 0 auto;
+    max-width: 680px;
+}
+.main-title p{
+    position: absolute;
+}
+.main-title-author{
+    padding-top: 60px;
+    padding-left: 390px;
+}
+
+.typing-block{
+    display: none;
+    z-index: 2;
+    height: 47px;
+    position: absolute;
+    width: 680px;
+    border-left: 2px solid #BFBFBF;
+    background-color: white;
+}
+
+@keyframes open {
+    2.3%{
+
+    }
+}

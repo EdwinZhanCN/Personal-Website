@@ -55,11 +55,9 @@ h2{
 #navigation .nav-content{
     margin: 0 auto;
     max-width: 980px;
-    padding: 0 22px;
     position: relative;
     z-index: 2;
-    padding-left: max(22px,env(safe-area-inset-left));
-    padding-right: max(22px,env(safe-area-inset-right));
+    padding: 0 max(22px, env(safe-area-inset-right)) 0 max(22px, env(safe-area-inset-left));
 }
 
 #navigation .nav-list{
@@ -138,7 +136,7 @@ h2{
     border-radius: 15px;
     display: block;
     grid-column: span 5;
-    background-color:#f1f4df
+    background-color:#ffffff;
 }
 
 

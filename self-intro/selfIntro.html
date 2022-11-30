@@ -13,7 +13,6 @@
         var op1 = 1;
         var op2 = 0;
         function animateout(){
-            console.log("nb");
             var page = document.getElementById("pic-wrapper");
             var title = document.getElementById("title");
             var p = document.getElementById("p");
@@ -39,11 +38,13 @@
             $(window).scroll(function(){
                 slideIn($("#detail-p1"));
                 slideIn($("#detail-pic1"));
+                slideIn($("#detail-p2"));
+                slideIn($("#detail-pic2"));
             });
 
             function slideIn(obj){
-                var targetHeight = obj.offset().top;
-                var scrollTop = $(window).scrollTop();
+                let targetHeight = obj.offset().top;
+                let scrollTop = $(window).scrollTop();
 
                 if(scrollTop > targetHeight - 800){
                     obj.addClass("build-in-animate");
@@ -101,7 +102,7 @@
         
         <div id = "detail" class="detail">
             <div class="detail-content">
-                <div class="detail-content-collumn">
+                <div class="detail-content-column">
                     <div  class="detail-chapter">
                         <p id = "detail-p1" class="detail-content-p slide-in-X">
                             The <span style="color: orange;">beautiful</span> pictures are all around the world.
@@ -109,6 +110,15 @@
                         <picture id = "detail-pic1" class="detail-pic slide-in-Y">
                             
                         </picture>
+                    </div>
+
+                    <div  class="detail-chapter">
+                        <picture id = "detail-pic2" class="detail-pic slide-in-X">
+                        </picture>
+                        <p id = "detail-p2" class="detail-content-p slide-in-Y">
+                            The <span style="color: orange;">beautiful</span> pictures are all around the world.
+                        </p>
+
                     </div>
                     
                 </div>
