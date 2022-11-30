@@ -325,7 +325,7 @@ h2{
 .contact-title{
     font-weight: 100;
     text-align-last: center;
-    margin-block-start:6;
+    margin-block-start:6px;
     margin-block-end: 0;
 }
 
@@ -333,10 +333,7 @@ h2{
     width: 100%;
     z-index: 1;
     cursor: default;
-    margin-top: 10;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 0px;
+    margin: 10px 0 0px;
     height: 44px;
     display: flex;
     -webkit-box-pack: justify;
@@ -350,6 +347,66 @@ h2{
     height: 44px;
     z-index: 1;
     vertical-align: top;
+}
+
+/*detail*/
+.detail{
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.detail-content{
+    display: flex;
+    position: relative;
+}
+
+.detail-content-column{
+    height: 100vh;
+    margin-left: 100px;
+    max-width: 100%;
+}
+
+.detail-content-p{
+    max-width: 35%;
+    font-size: 25px;
+}
+
+.slide-in-X{
+    opacity: 0;
+    transition: opacity .6s cubic-bezier(0.16, 1, 0.3, 1),transform .6s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateX(15px);
+}
+
+.slide-in-X.build-in-animate{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-in-Y{
+    opacity: 0;
+    transition: opacity .6s cubic-bezier(0.16, 1, 0.3, 1),transform .6s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(100px);
+}
+
+.slide-in-Y.build-in-animate{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.detail-chapter{
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+.detail-pic{
+    background-size: 100%;
+    margin: 30px auto;
+    height: 270px;
+    width: 500px;
+    background-image: url(/self-intro/img/sample.jpg);
 }
 
 @keyframes open{

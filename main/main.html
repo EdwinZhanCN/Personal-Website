@@ -1,19 +1,34 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    
-    <script type="text/javascript" src="screenFactors.js"></script>
-    <script type="text/javascript" src="mainOperation.js"></script>
+
     <link rel="stylesheet" type="text/css" href="Main sample.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EdwinZhan</title>
-    <script type="text/javascript">
-    </script>
-    
+    <script src="/js/jquery-3.5.0.js"></script>
 </head>
 <body class="main-body">
+<script type="text/javascript" >
+    $(function(){
+        $(window).scroll(function(){
+            slideIn($("#detail-p2"));
+            slideIn($("#detail-pic2"));
+        });
+
+        function slideIn(obj){
+            let targetHeight = obj.offset().top;
+            let scrollTop = $(window).scrollTop();
+
+            if(scrollTop > targetHeight - 800){
+                obj.addClass("build-in-animate");
+            } else{
+                obj.removeClass("build-in-animate");
+            }
+        }
+    });
+</script>
     <div class="hamburger_menu" id="navigation2">
         <input type="checkbox" id="toggle" />
         <label for="toggle">
@@ -92,24 +107,31 @@
         </main>
     </div>
     <div class = "main-intro">
-        <div style="display: flex;">
-            <h1 class="main-intro-title">
-                Welcome to my personal page!
-            </h1>
+        <div id = "detail" class="detail">
+            <div class="detail-content">
+                <div class="detail-content-column">
+                    <div  class="detail-chapter">
+                        <p id = "detail-p1" class="detail-content-p slide-in-X build-in-animate">
+                            The <span style="color: orange;">beautiful</span> pictures are all around the world.
+                        </p>
+                        <picture id = "detail-pic1" class="detail-pic slide-in-Y build-in-animate">
+
+                        </picture>
+                    </div>
+
+                    <div  class="detail-chapter">
+                        <picture id = "detail-pic2" class="detail-pic slide-in-X ">
+                        </picture>
+                        <p id = "detail-p2" class="detail-content-p slide-in-Y">
+                            The <span style="color: orange;">beautiful</span> pictures are all around the world.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
         </div>
-        <p class = "main-intro-content">
-            I am a programmer, artist, thinker....
-        </p>
-        <section class="intro-pic">
-            <picture class="intro-pic-firstcode">
-            </picture>
-            <picture class="intro-pic-2">
-            </picture>
-            <picture class="intro-pic-3">
-            </picture>
-            <picture class="intro-pic-4">
-            </picture>
-        </section>
         <section class="contact">
             <h1 class="contact-title">
                 Contact information
