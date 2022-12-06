@@ -11,6 +11,13 @@
 </head>
 <body class="main-body">
 <script type="text/javascript" >
+    function copy(){
+        alert("Copy Success!");
+        var input = document.getElementById("email");
+        input.select();
+        document.execCommand("Copy");
+
+    }
     $(function(){
         $(window).scroll(function(){
             slideIn($("#detail-p2"));
@@ -29,131 +36,143 @@
         }
     });
 </script>
-    <div class="hamburger_menu" id="navigation2">
-        <input type="checkbox" id="toggle" />
-        <label for="toggle">
-            <div class="hamburger_container">
-                <span></span>
-                <span></span>
-            </div>
-        </label>
-        <ul>
-            <li>EdwinZhan</li>
-            <li>Self-Intro</li>
-            <li>Ideas</li>
-            <li>Blog</li>
-            <li>Progress</li>
-        </ul>
-    </div>
-    <nav id = "navigation">
-        <div class = "nav-content">
-            <ul class = "nav-list">
-                <li class = "nav-item">
-                    <a id = "navText" class = "nav-link" href="/main/main.html">
+<div class="hamburger_menu" id="navigation2">
+    <input type="checkbox" id="toggle" />
+    <label for="toggle">
+        <div class="hamburger_container">
+            <span></span>
+            <span></span>
+        </div>
+    </label>
+    <ul>
+        <li>EdwinZhan</li>
+        <li>Self-Intro</li>
+        <li>Ideas</li>
+        <li>Blog</li>
+        <li>Progress</li>
+    </ul>
+</div>
+<nav id = "navigation">
+    <div class = "nav-content">
+        <ul class = "nav-list">
+            <li class = "nav-item">
+                <a id = "navText" class = "nav-link" href="/main/main.html">
                         <span class = "nav-text">
                             EdwinZhan
                         </span>
-                    </a>
-                </li>
-                <li class = "nav-item">
-                    <a class = "nav-link" href="/self-intro/selfIntro.html">
+                </a>
+            </li>
+            <li class = "nav-item">
+                <a class = "nav-link" href="/self-intro/selfIntro.html">
                         <span class = "nav-text" >
                             Self-Intro
                         </span>
-                    </a>
-                </li>
-                <li class = "nav-item">
-                    <a class = "nav-link">
+                </a>
+            </li>
+            <li class = "nav-item">
+                <a class = "nav-link">
                         <span class = "nav-text">
                             Ideas
                         </span>
-                    </a>
-                </li>
-                <li class = "nav-item">
-                    <a class = "nav-link">
+                </a>
+            </li>
+            <li class = "nav-item">
+                <a class = "nav-link">
                         <span class = "nav-text">
                             Blog
                         </span>
-                    </a>
-                </li>
-                <li class = "nav-item">
-                    <a class = "nav-link" href="/progress/progress.html">
+                </a>
+            </li>
+            <li class = "nav-item">
+                <a class = "nav-link" href="/progress/progress.html">
                         <span class = "nav-text">
                             Progress
                         </span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div id ="daily" class = "daily-wrapper">
-        <picture class="pic-wrapper">
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div id ="daily" class = "daily-wrapper">
+    <picture class="pic-wrapper">
 
-        </picture>
+    </picture>
 
-        <main class= "main-wrapper">
-            <section class = "main-content">
-                <h3>
-                    What's happening?
-                </h3>
-                <li>
-                    <a>
+    <main class= "main-wrapper">
+        <section class = "main-content">
+            <h3>
+                What's happening?
+            </h3>
+            <li>
+                <a>
                         <span>
                             A research project about
                         </span>
-                    </a>
-                </li>
-            </section>
-        </main>
-    </div>
-    <div class = "main-intro">
-        <div id = "detail" class="detail">
-            <div class="detail-content">
-                <div class="detail-content-column">
-                    <div  class="detail-chapter">
-                        <p id = "detail-p1" class="detail-content-p slide-in-X build-in-animate">
-                            The <span style="color: orange;">beautiful</span> pictures are all around the world.
-                        </p>
-                        <picture id = "detail-pic1" class="detail-pic slide-in-Y build-in-animate">
+                </a>
+            </li>
+        </section>
+    </main>
+</div>
+<div class = "main-intro">
+    <div id = "detail" class="detail">
+        <div class="detail-content">
+            <div class="detail-content-column">
+                <div  class="detail-chapter">
+                    <p id = "detail-p1" class="detail-content-p">
+                        The <span style="color: orange;">beautiful</span> pictures are all around the world.
+                    </p>
+                    <picture id = "detail-pic1" class="detail-pic">
+                    </picture>
+                </div>
 
-                        </picture>
-                    </div>
-
-                    <div  class="detail-chapter">
-                        <picture id = "detail-pic2" class="detail-pic slide-in-X ">
-                        </picture>
-                        <p id = "detail-p2" class="detail-content-p slide-in-Y">
-                            The <span style="color: orange;">beautiful</span> pictures are all around the world.
-                        </p>
-
-                    </div>
+                <div  class="detail-chapter">
+                    <picture id = "detail-pic2" class="detail-pic slide-in-X ">
+                    </picture>
+                    <p id = "detail-p2" class="detail-content-p slide-in-Y">
+                        The <span style="color: orange;">beautiful</span> pictures are all around the world.
+                    </p>
 
                 </div>
 
             </div>
+
         </div>
-        <section class="contact">
-            <h1 class="contact-title">
-                Contact information
-            </h1>
-            <span class="contact-span">
-            </span>
-            <div style="display: flex;">
-                <ul class="contact-list">
-                    <li class = "contact-item">
-                        <a href="https://space.bilibili.com/383858425" target="_blank">
-                            <img class = "bilibili-icon" src="./icons/bilibili.ico">
-                        </a>
-                    </li>
-                    <li class="contact-item">
-                        <a href="https://github.com/EdwinZhanCN" target="_blank">
-                            <img src="./icons/github.png">
-                        </a>
-                    </li>
-                </ul>
-                
-            </div>
-        </section>
     </div>
+    <section class="contact">
+        <h1 class="contact-title">
+            Contact information
+        </h1>
+        <footer class = "contact-wrapper">
+            <ul class="contact-list">
+                <li class = "contact-item">
+                    <a class = "contact-link" href="https://space.bilibili.com/383858425" target="_blank">
+                        <img class = "bilibili-icon" src="./icons/bilibili.ico">
+                        <span>
+                            Bilibili Personal Space
+                        </span>
+                    </a>
+
+                </li>
+                <li class="contact-item">
+                    <a class = "contact-link" href="https://github.com/EdwinZhanCN" target="_blank">
+                        <img src="./icons/github.png">
+                        <span>
+                            Github
+                        </span>
+                    </a>
+                </li>
+                <li class="contact-item">
+                    <a class = "contact-link" onclick = copy()>
+                        <img src="./icons/mail-seen.ico">
+                        <span id = "email">
+                            ed_zhan@outlook.com
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+
+    </section>
+</div>
 </body>
 </html>
