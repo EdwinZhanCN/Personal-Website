@@ -1,4 +1,6 @@
-
+*{
+    margin: 0;
+}
 .maintitle-container{
     height: 0;
     padding-top: 15.16%;
@@ -111,7 +113,7 @@ h2{
 .daily-wrapper{
     height: calc(var(--main-width)*(510/1422));
     max-width: 100%;
-    padding-top: 44px;
+    padding-top: 55px;
     grid-gap: 2rem;
     display: grid;
     grid-template-columns: repeat(12,minmax(0,1fr));
@@ -122,7 +124,7 @@ h2{
     .daily-wrapper{
         height: 510px;
         max-width: 1422px;
-        padding-top: 44px;
+        padding-top: 55px;
         grid-gap: 2rem;
         display: grid;
         grid-template-columns: repeat(12,minmax(0,1fr));
@@ -150,13 +152,12 @@ h2{
 }
 
 .main-content{
-	user-select: none;
-	margin:0 15px;
+    user-select: none;
+    margin:0 15px;
 }
 
 .main-intro{
     margin-top: 20px;
-    margin-left: 1rem;
 }
 
 .main-intro-title{
@@ -233,68 +234,68 @@ h2{
     top: 0;
     right: 0;
     left: 0;
-    margin: none;
-	width: 100%;
-	height: 44px;
-	background-color: rgba(0,0,0);
+    margin: 0;
+    width: 100%;
+    height: 44px;
+    background-color: rgba(0,0,0);
 }
 
 .hamburger_menu #toggle {
-	display: none;
+    display: none;
 }
 
 .hamburger_menu label {
-    margin: none;
-	display: block;
-	width: 44px;
-	height: 44px;
-	cursor: pointer;
+    margin: 0;
+    display: block;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
 }
 .hamburger_menu label .hamburger_container {
-	position: relative;
-	top: 17px;
-	left: 14px;
-	width: 20px;
-	height: 20px;
+    position: relative;
+    top: 17px;
+    left: 14px;
+    width: 20px;
+    height: 20px;
 }
 .hamburger_menu label .hamburger_container span {
-	position: relative;
-	top: 0;
-	display: block;
-	height: 1px;
-	background-color: #fff;
-	transition: transform 0.2s ease-in-out, top 0.2s ease-in-out 0.2s;
+    position: relative;
+    top: 0;
+    display: block;
+    height: 1px;
+    background-color: #fff;
+    transition: transform 0.2s ease-in-out, top 0.2s ease-in-out 0.2s;
 }
 .hamburger_menu label .hamburger_container span:nth-child(2) {
-	top: 10px;
+    top: 10px;
 }
 
 .hamburger_menu #toggle:checked + label .hamburger_container span:nth-child(1) {
-	top: 5px;
-	transform: rotate(45deg);
-	transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
+    top: 5px;
+    transform: rotate(45deg);
+    transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
 }
 
 .hamburger_menu #toggle:checked + label .hamburger_container span:nth-child(2) {
-	top: 5px;
-	transform: rotate(-45deg);
-	transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
+    top: 5px;
+    transform: rotate(-45deg);
+    transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
 }
 .hamburger_menu ul {
     margin-top: 0;
-	width: 100vm;
-	height: calc(100vh - 48px);
-	padding: 0 50px;
-	transform: scaleY(0);
-	transition: all 0.4s ease-in-out;
-	transform-origin: 50% 0;
-	background-color: rgba(0, 0, 0);
+    width: 100vm;
+    height: calc(100vh - 48px);
+    padding: 0 50px;
+    transform: scaleY(0);
+    transition: all 0.4s ease-in-out;
+    transform-origin: 50% 0;
+    background-color: rgba(0, 0, 0);
 }
 .hamburger_menu ul li {
-	list-style: none;
-	height: 50px;
-	line-height: 50px;
-	font-size: 14px;
+    list-style: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
     font-weight: 400;
     color: wheat;
     position: relative;
@@ -307,46 +308,10 @@ h2{
     color: white;
 }
 .hamburger_menu ul li:nth-child(-n + 4) {
-	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 .hamburger_menu #toggle:checked ~ ul {
-	transform: scaleY(1);
-}
-
-.bilibili-icon{
-    display: block;
-}
-
-.contact-span{
-    display: block;
-    height: 1px;
-    background-color: black;
-}
-.contact-title{
-    font-weight: 100;
-    text-align-last: center;
-    margin-block-start:6px;
-    margin-block-end: 0;
-}
-
-.contact-list{
-    width: 100%;
-    z-index: 1;
-    cursor: default;
-    margin: 10px 0 0px;
-    height: 44px;
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content:space-evenly;
-}
-.contact-item{
-    list-style-type: none;
-    box-sizing: border-box;
-    display: inline-block;
-    position: relative;
-    height: 44px;
-    z-index: 1;
-    vertical-align: top;
+    transform: scaleY(1);
 }
 
 /*detail*/
@@ -362,7 +327,7 @@ h2{
 }
 
 .detail-content-column{
-    height: 100vh;
+    height: 100%;
     margin-left: 100px;
     max-width: 100%;
 }
@@ -401,6 +366,38 @@ h2{
     align-items: center;
     position: relative;
 }
+
+@keyframes slide-in-X{
+    from{
+        opacity: 0;
+        transform: translateX(15px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-Y {
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#detail-p1{
+    animation-name: slide-in-X;
+    animation-duration: 1s;
+}
+
+#detail-pic1{
+    animation-name: slide-in-Y;
+    animation-duration: 1s;
+}
+
 .detail-pic{
     background-size: 100%;
     margin: 30px auto;
@@ -412,4 +409,59 @@ h2{
 @keyframes open{
     from{opacity: 0;}
     to{opacity: 1;}
+}
+
+/*Contact information*/
+
+.contact{
+    background: #b2aabc;
+}
+.contact-title{
+    color: #333333;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-family: "JetBrains Mono";
+    font-weight: normal;
+    font-size: 30px;
+}
+
+.contact-wrapper{
+    margin: 0 auto;
+    width: 100%;
+}
+
+.contact-list{
+    width: auto;
+    padding-inline-start: 0;
+    list-style: none;
+}
+
+.contact-link{
+    padding-bottom: 10px;
+    width: 100%;
+    color: #e6fef4;
+    text-decoration: none;
+    display: flex;
+    justify-content: left;
+    cursor: pointer;
+}
+.contact-link span{
+    user-select: none;
+    padding-left: 8px;
+    padding-top: 4px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-size: 20px;
+    display: block;
+    opacity: 0;
+    width:auto;
+    transform: translateX(-60px);
+}
+
+.contact-link:hover span{
+    opacity: 1;
+    user-select: none;
+    transform: translateX(0px);
+    transition: opacity .6s cubic-bezier(0.16, 1, 0.3, 1),transform .6s cubic-bezier(0.16, 1, 0.3, 1);
+    margin-block-end: 0;
 }
